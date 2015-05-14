@@ -37,7 +37,7 @@ class commission_rule(osv.osv):
         'type': fields.selection(COMMISSION_RULE, 'Type', required=True),
         'fix_percent': fields.float('Fix Percentage'),
         'rule_rates': fields.one2many('commission.rule.rate', 'commission_rule_id', 'Rates'),
-        'rule_conditions': fields.one2many('commission.rule.condition', 'commission_rule_id', 'Conditions'),
+        # 'rule_conditions': fields.one2many('commission.rule.condition', 'commission_rule_id', 'Conditions'),
         'active': fields.boolean('Active'),
         'sale_team_ids': fields.one2many('sale.team', 'commission_rule_id', 'Teams'),
         'salesperson_ids': fields.one2many('res.users', 'commission_rule_id', 'Salesperson'),
